@@ -1,31 +1,51 @@
-# Online Python - IDE, Editor, Compiler, Interpreter
 import random
 
-num1 = 1100
-num2 = 1120
-step = 5
-
-num3 = random.randint(num1, num2)
-
-if num3 % 2 == 0:
-    if num2 - num3 > 2* step:
-        for i in range(1,step + 1):
-            num3 = num3 + 2
-            print("Code with Test Case Number:", num3)
-        
+def randomTestCaseGenerator():
+    number1 = 1100
+    number2 = 1140
+    step = 15
+    number3 = random.randrange(number1, number2)
+    choice = number3
+    altchoice = choice
+    alt2choice = choice
+    print("debug", choice)
+    if number3%2 == 0:
+        if number2 - number3 >= step:
+            for i in range(0, step):
+                choice = choice + 2
+                if choice <= number2:
+                    print("Choose Test Case with number:", choice)
+                if choice > number2:
+                    altchoice = altchoice - 2
+                    print("Choose Test case with number:", altchoice)
+        else:
+            for i in range(0,step):
+                choice = choice - 2
+                if choice >= number1:
+                    print("Choose Test Case with number:", choice)
+                if choice < number1:    
+                    alt2choice = alt2choice + 2
+                    print("Choose Test Case with number:",alt2choice)
     else:
-        for i in range(1,step + 1):
-            num3 = num3 - 2
-            print("Code with Test Case Number:", num3)
-else:
-    num3 = num3 + 1
-    if num2 - num3 > step:
-        for i in range(1,step + 1):
-            num3 = num3 + 2
-            print("Code with Test Case Number:", num3)
-        
-    else:
-        for i in range(1,step + 1):
-            num3 = num3 - 2
-            print("Code with Test Case Number:", num3)
-    
+        print("Debug: Odd Case")
+        choice = choice + 1
+        altchoice = altchoice + 1
+        alt2choice = alt2choice + 1
+        if number2 - number3 >= step:
+            for i in range(0, step):
+                choice = choice + 2
+                if choice <= number2:
+                    print("Choose Test Case with number:", choice)
+                if choice > number2:
+                    altchoice = altchoice - 2
+                    print("Choose Test case with number:", altchoice)
+        else:
+            for i in range(0,step):
+                choice = choice - 2
+                if choice >= number1:
+                    print("Choose Test Case with number:", choice)
+                if choice < number1:    
+                    alt2choice = alt2choice + 2
+                    print("Choose Test Case with number:",alt2choice)
+
+randomTestCaseGenerator()
