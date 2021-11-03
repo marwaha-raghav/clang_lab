@@ -2,8 +2,8 @@ import random
 
 def randomTestCaseGenerator():
     number1 = 1100
-    number2 = 1140
-    step = 15
+    number2 = 1130
+    step = 10
     number3 = random.randrange(number1, number2)
     choice = number3
     altchoice = choice

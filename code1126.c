@@ -2,9 +2,10 @@
 
 // Use C-Lang Static Analyzer to analyze and fix the bugs
 // Also review the output generated to find any bugs that the static analyzer misses.
-// Hint this code has 5-6 bugs that can be identified using static analyzer, 2 Tasks will also have to be completed 
+// Hint this code has 5-6 bugs that can be identified using static analyzer, 3 Tasks will also have to be completed 
 //1.. add null pointer check condition for ptr1 and ptr2 in the even_number method
-//2.. Complete even logic Logic using given pointer.
+//2.. add null pointer check condition for ptr3 in the array_print method
+//3.. Complete even Logic using given pointer.
 
 //MACROS (Hint: 1 macro definition for a library function is missing (look at warnings maybe?))
 #include<stdio.h>
@@ -20,7 +21,7 @@ void even_number(int *ptr1, char* ptr2){
     
     // ------  add null pointer check condition for ptr1 Here-------
     
-    //Task 2 : complete logic for reversing a number
+    //Task 2 : complete logic for detecting an even number
      
      if()//add logic for checking even number inside if condition ()
      {
@@ -37,6 +38,7 @@ void even_number(int *ptr1, char* ptr2){
 //another custom array printing an array
 void array_print(int* ptr3, int n)
 {
+    // Task 3:: Add code here (if check condition for NULL pointer)
     for(int i=0; i<n+1; i++)
     {
         ptr3[i] = i; 
