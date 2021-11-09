@@ -16,7 +16,6 @@ int main(int argc, char *argv[])
         char *str1 = malloc(65536);  
         if(str1) 
             free(str1); 
-        //str[0] = NULL;                              /* FIX */
         if (str[0]) 
             str[0][0] = 'S'; 
     } 
